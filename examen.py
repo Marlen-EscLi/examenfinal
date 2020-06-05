@@ -24,6 +24,15 @@ etiqueta.pack()
 #textetiqueta5 = Entry(ventana, textvariable = entrada).place(x = 180, y = 160)
 #Campo de texto y labels
 
+entrada1 = StringVar()
+etiqueta1 = tkinter.Label(ventana, text = "Nombre", font = ("Century Gothic", 18)).place(x = 70, y = 40)
+textetiqueta1 = Entry(ventana, textvariable = entrada1).place(x = 180, y = 43)
+
+entrada2 = StringVar()
+etiqueta2 = tkinter.Label(ventana, text = "Apellido", font = ("Century Gothic", 18)).place(x = 70, y = 67)
+textetiqueta2 = Entry(ventana, textvariable = entrada2).place(x = 180, y = 73)
+
+
 
 ventana.mainloop()
 
