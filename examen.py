@@ -33,6 +33,19 @@ etiqueta2 = tkinter.Label(ventana, text = "Apellido", font = ("Century Gothic", 
 textetiqueta2 = Entry(ventana, textvariable = entrada2).place(x = 180, y = 73)
 
 
+entrada3 = StringVar()
+etiqueta3 = tkinter.Label(ventana, text = "Día", font = ("Century Gothic", 18)).place(x = 70, y = 95)
+textetiqueta3 = Entry(ventana, textvariable = entrada3).place(x = 180, y = 100)
+
+entrada4 = StringVar()
+etiqueta4 = tkinter.Label(ventana, text = "Mes", font = ("Century Gothic", 18)).place(x = 70, y = 125)
+textetiqueta4 = Entry(ventana, textvariable = entrada4).place(x = 180, y = 130)
+
+entrada5 = StringVar()
+etiqueta5 = tkinter.Label(ventana, text = "Año", font = ("Century Gothic", 18)).place(x = 70, y = 155)
+textetiqueta5 = Entry(ventana, textvariable = entrada5).place(x = 180, y = 160)
+
+
 
 ventana.mainloop()
 
