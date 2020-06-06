@@ -55,6 +55,7 @@ botonf4 = Button(ventana, text = "Función 4", font = ("Century Gothic", 16), wi
 botonf5 = Button(ventana, text = "Función 5", font = ("Century Gothic", 16), width = 8).place (x = 409 , y = 198)
 
 #label de respuestas
+self.respuestas = tkinter.Label(ventana, text = "    f  ",font = ("Century Gothic", 18)).place(x = 450, y = 210) )
 
 #creación de variables
 def fn1(self):
@@ -65,6 +66,7 @@ def fn1(self):
     bindia = format(dia, "0b")
     bindmes = format(mes,"0b")
     binanio = format(anio,"0b")
+    self.respuestas = tkinter.Label(ventana, text = "    f  ",font = ("Century Gothic", 18)).place(x = 450, y = 210) )
 
 
 
