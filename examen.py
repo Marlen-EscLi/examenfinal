@@ -59,7 +59,6 @@ botonf5 = Button(ventana, text = "Función 5", command = self.fn5, font = ("Cent
 #creación de variables
  self.message = Label(text = '', fg = 'white').place(x = 250, y = 220)
  
-
     
  def fn1(self):
     dia=int(self.entrada3.get())
