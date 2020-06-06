@@ -1,9 +1,6 @@
 import tkinter
 from tkinter import *
 
-#creación de funciones
-
-
 ventana = tkinter.Tk()
 ventana.title("Examen Final")
 ventana.geometry("550x350")
@@ -55,7 +52,8 @@ botonf3 = Button(ventana, text = "Función 3", command = fn3, font = ("Century G
 botonf4 = Button(ventana, text = "Función 4", command = fn4, font = ("Century Gothic", 16), width = 8).place (x = 318, y = 198)
 botonf5 = Button(ventana, text = "Función 5", command = fn5, font = ("Century Gothic", 16), width = 8).place (x = 409 , y = 198)
 
-        
+#área de mensajes
+
 
 
 
