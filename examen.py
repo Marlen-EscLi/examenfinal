@@ -51,5 +51,24 @@ botonf2 = Button(ventana, text = "Función 2", font = ("Century Gothic", 16), wi
 botonf3 = Button(ventana, text = "Función 3", font = ("Century Gothic", 16), width = 8).place (x = 227, y = 198)
 botonf4 = Button(ventana, text = "Función 4", font = ("Century Gothic", 16), width = 8).place (x = 318, y = 198)
 botonf5 = Button(ventana, text = "Función 5", font = ("Century Gothic", 16), width = 8).place (x = 409 , y = 198)
+
+#creación de funciones
+def leer_frase(ventana,textetiqueta1);
+    global text
+        txt = (vetana,textetiqueta1)
+
+def contar_letras();
+    conta = 0
+        for i in txt
+            if(i.isalpha())
+                conta+=1
+    print("letras :",conta)   
+
+leer_frase()
+contar_letras()         
+
+
+
+
 ventana.mainloop()
 
