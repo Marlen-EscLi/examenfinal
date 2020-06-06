@@ -1,6 +1,7 @@
 import tkinter
 from tkinter import *
-
+import datetime
+import math
 #iniciar operaciones
 ventana = tkinter.Tk()
 ventana.title("Examen Final")
