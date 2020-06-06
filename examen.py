@@ -26,47 +26,51 @@ etiqueta.pack()
 #textetiqueta5 = Entry(ventana, textvariable = entrada).place(x = 180, y = 160)
 #Campo de texto y labels
 
-entrada1 = StringVar()
+self.entrada1 = StringVar()
 etiqueta1 = tkinter.Label(ventana, text = "Nombre", font = ("Century Gothic", 18)).place(x = 75, y = 40)
 textetiqueta1 = Entry(ventana, textvariable = entrada1, width = 30).place(x = 185, y = 43)
 
-entrada2 = StringVar()
+self.entrada2 = StringVar()
 etiqueta2 = tkinter.Label(ventana, text = "Apellido", font = ("Century Gothic", 18)).place(x = 75, y = 67)
 textetiqueta2 = Entry(ventana, textvariable = entrada2, width = 30).place(x = 185, y = 73)
 
 
-entrada3 = StringVar()
+self.entrada3 = StringVar()
 etiqueta3 = tkinter.Label(ventana, text = "Día", font = ("Century Gothic", 18)).place(x = 75, y = 95)
 textetiqueta3 = Entry(ventana, textvariable = entrada3, width = 30).place(x = 185, y = 100)
 
-entrada4 = StringVar()
+self.entrada4 = StringVar()
 etiqueta4 = tkinter.Label(ventana, text = "Mes", font = ("Century Gothic", 18)).place(x = 75, y = 125)
 textetiqueta4 = Entry(ventana, textvariable = entrada4, width = 30).place(x = 185, y = 130)
 
-entrada5 = StringVar()
+self.entrada5 = StringVar()
 etiqueta5 = tkinter.Label(ventana, text = "Año", font = ("Century Gothic", 18)).place(x = 75, y = 155)
 textetiqueta5 = Entry(ventana, textvariable = entrada5, width = 30).place(x = 185, y = 160)
 
 #Creación de los botones
-botonf1 = Button(ventana, text = "Función 1", command = fn1, font = ("Century Gothic", 16), width = 8).place (x = 45, y = 198)
-botonf2 = Button(ventana, text = "Función 2", font = ("Century Gothic", 16), width = 8).place (x = 136, y = 198)
-botonf3 = Button(ventana, text = "Función 3", font = ("Century Gothic", 16), width = 8).place (x = 227, y = 198)
-botonf4 = Button(ventana, text = "Función 4", font = ("Century Gothic", 16), width = 8).place (x = 318, y = 198)
-botonf5 = Button(ventana, text = "Función 5", font = ("Century Gothic", 16), width = 8).place (x = 409 , y = 198)
+botonf1 = Button(ventana, text = "Función 1", command = self.fn1, font = ("Century Gothic", 16), width = 8).place (x = 45, y = 198)
+botonf2 = Button(ventana, text = "Función 2", command = self.fn2, font = ("Century Gothic", 16), width = 8).place (x = 136, y = 198)
+botonf3 = Button(ventana, text = "Función 3", command = self.fn3, font = ("Century Gothic", 16), width = 8).place (x = 227, y = 198)
+botonf4 = Button(ventana, text = "Función 4", command = self.fn4, font = ("Century Gothic", 16), width = 8).place (x = 318, y = 198)
+botonf5 = Button(ventana, text = "Función 5", command = self.fn5, font = ("Century Gothic", 16), width = 8).place (x = 409 , y = 198)
 
 #label de respuestas
-self.respuestas = tkinter.Label(ventana, text = "    f  ",font = ("Century Gothic", 18)).place(x = 450, y = 210) )
 
 #creación de variables
-def fn1(self):
-    dia = int(entrda1.get())
-    mes = int(entrda4.get())
-    anio = int(entrda5.get())
+ self.message = Label(text = '', fg = 'white').place(x = 250, y = 220)
+ 
 
-    bindia = format(dia, "0b")
-    bindmes = format(mes,"0b")
-    binanio = format(anio,"0b")
-    self.respuestas = tkinter.Label(ventana, text = "    f  ",font = ("Century Gothic", 18)).place(x = 450, y = 210) )
+    
+ def fn1(self):
+    dia=int(self.entrada3.get())
+    mes=int(self.entrada4.get())
+    anio=int(self.entrada5.get())
+
+    bindia=format(dia, '0b' )
+    binmes=format(mes, '0b')
+    binanio=format(anio, '0b')
+
+    self.message['text'] = 'La fecha es: {}/{}/{} y  en binario es:{}/{}/{}'.format(dia,mes,anio,bindia,binmes,binanio)
 
 
 
