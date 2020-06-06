@@ -2,18 +2,7 @@ import tkinter
 from tkinter import *
 
 #creación de funciones
-def funcion4():
-    global letras
-    letras = Label(ventana, text = " = " + entrada1.get(),font = ("Century Gothic", 18).place(x = 75, y = 40 ))
 
-def contar4():
-    contar = 0
-    for i in letras:
-        if(i.isalpha()):
-            contar+= 1
-    print(" = ",contar)
-funcion4()
-contar4()
 
 ventana = tkinter.Tk()
 ventana.title("Examen Final")
@@ -60,11 +49,11 @@ etiqueta5 = tkinter.Label(ventana, text = "Año", font = ("Century Gothic", 18))
 textetiqueta5 = Entry(ventana, textvariable = entrada5, width = 30).place(x = 185, y = 160)
 
 #Creación de los botones
-botonf1 = Button(ventana, text = "Función 1", command = codigobinario, font = ("Century Gothic", 16), width = 8).place (x = 45, y = 198)
-botonf2 = Button(ventana, text = "Función 2", font = ("Century Gothic", 16), width = 8).place (x = 136, y = 198)
-botonf3 = Button(ventana, text = "Función 3", font = ("Century Gothic", 16), width = 8).place (x = 227, y = 198)
-botonf4 = Button(ventana, text = "Función 4", command = funcion4, commando = contar4, font = ("Century Gothic", 16), width = 8).place (x = 318, y = 198)
-botonf5 = Button(ventana, text = "Función 5", font = ("Century Gothic", 16), width = 8).place (x = 409 , y = 198)
+botonf1 = Button(ventana, text = "Función 1", command = fn1, font = ("Century Gothic", 16), width = 8).place (x = 45, y = 198)
+botonf2 = Button(ventana, text = "Función 2", command = fn2, font = ("Century Gothic", 16), width = 8).place (x = 136, y = 198)
+botonf3 = Button(ventana, text = "Función 3", command = fn3, font = ("Century Gothic", 16), width = 8).place (x = 227, y = 198)
+botonf4 = Button(ventana, text = "Función 4", command = fn4, font = ("Century Gothic", 16), width = 8).place (x = 318, y = 198)
+botonf5 = Button(ventana, text = "Función 5", command = fn5, font = ("Century Gothic", 16), width = 8).place (x = 409 , y = 198)
 
         
 
