@@ -6,17 +6,6 @@ ventana = tkinter.Tk()
 ventana.title("Examen Final")
 ventana.geometry("550x350")
 
-#creación de variables
-def fn1(self):
-    dia = int(entrda1.get())
-    mes = int(entrda4.get())
-    anio = int(entrda5.get())
-
-    bindia = format(dia, "0b")
-    bindmes = format(mes,"0b")
-    binanio = format(anio,"0b")
-
-    mostrar['text'] = 'La fecha es: {}/{}/{} y  en binario es:{}/{}/{}'.format(dia,mes,anio,bindia,binmes,binanio)
 
 etiqueta = tkinter.Label(ventana, text = "BIENVENIDO", font = ("Verdana", 30))
 etiqueta.pack()
@@ -65,11 +54,18 @@ botonf3 = Button(ventana, text = "Función 3", font = ("Century Gothic", 16), wi
 botonf4 = Button(ventana, text = "Función 4", font = ("Century Gothic", 16), width = 8).place (x = 318, y = 198)
 botonf5 = Button(ventana, text = "Función 5", font = ("Century Gothic", 16), width = 8).place (x = 409 , y = 198)
 
-#área de mensajes
-mostrar = Label(text = " ",fg = "red").place (x = 300, y = 200)
+#label de respuestas
 
+#creación de variables
+def fn1(self):
+    dia = int(entrda1.get())
+    mes = int(entrda4.get())
+    anio = int(entrda5.get())
 
-      
+    bindia = format(dia, "0b")
+    bindmes = format(mes,"0b")
+    binanio = format(anio,"0b")
+
 
 
 ventana.mainloop()
