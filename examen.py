@@ -63,6 +63,7 @@ self.message = tkinter.Label(ventana, text = ' Resultdo ', fg = 'withe').place(x
  
  
   #creación de variables  
+  
  def fn1(self):
     dia=int(self.entrada3.get())
     mes=int(self.entrada4.get())
