@@ -56,10 +56,10 @@ botonf5 = Button(ventana, text = "Función 5", command = self.fn5, font = ("Cent
 
 #label de respuestas
 
-#creación de variables
+
  self.message = Label(text = '', fg = 'white').place(x = 250, y = 220)
  
-    
+  #creación de variables  
  def fn1(self):
     dia=int(self.entrada3.get())
     mes=int(self.entrada4.get())
@@ -69,8 +69,60 @@ botonf5 = Button(ventana, text = "Función 5", command = self.fn5, font = ("Cent
     binmes=format(mes, '0b')
     binanio=format(anio, '0b')
 
-    self.message['text'] = 'La fecha es: {}/{}/{} y  en binario es:{}/{}/{}'.format(dia,mes,anio,bindia,binmes,binanio)
+    self.message['text'] = 'fecha = : {}/{}/{}   binario = :{}/{}/{}'.format(dia,mes,anio,bindia,binmes,binanio)
 
+def fn2(self):
+    dia=int(self.entrada3.get())
+        mes=int(self.entrada4.get())
+        anio=int(self.entrada5.get())
+        fnaciemiento = datetime.datetime(anio, mes, dia)
+        factual = datetime.datetime.now()
+        diferencia = factual - fnaciemiento
+        dvividos = diferencia.days
+
+        self.message['text'] = 'Usted nació el día : {}/{}/{}: y a vivido {} dias'.format(dia,mes,anio,dvividos)
+
+ def fn3(self):
+        nombre=str(self.entrada1.get())
+        apellido=str(self.entrada2.get())
+        nnombre=int(len(nombre))
+        napellido=int(len(apellido))
+        if nnombre%2==0 and napellido %2==0 :
+            self.message['text'] = '{} {} su nombre es par y su apellido es par'.format(nombre,apellido)
+        elif nnombre%2==0 and napellido %2==1:
+            self.message['text'] = '{} {} su nombre es par y su apellido es impar'.format(nombre,apellido)
+        elif nnombre%2==1 and napellido %2==0:
+            self.message['text'] = '{} {} su nombre es impar y su apellido es par'.format(nombre,apellido)
+        else:
+            self.message['text'] = '{} {} su nombre es impar y su apellido es impar'.format(nombre,apellido)
+
+def fn4(self):
+        nombre=str(self.entrada1.get())
+        apellido=str(self.entrada2.get())
+        conteo = 0
+        for caracter in nombre:
+            if caracter == 'a' or carac =='A' or caracter =='e' or carac =='E' or caracter =='i' or caracter =='I' or caracter =='o' or caracter =="O" or caracter =="u" or caracter =="U":
+                conteo + = 1
+        for caracter in apellido:
+            if caracter == 'a' or caracter =='A' or caracter =='e' or caracter =='E' or caracter =='i' or caracter =='I' or caracter =='o' or caracter =="O" or caracter =="u" or caracter =="U":
+                conteo + = 1
+        nom =len(nombre)
+        ap =len(apellido)
+        consonante= nom +ap - conteo
+
+        self.message['text'] = ' tiene {} vocales y {} consonantes'.format(conteo,consonante)
+     
+
+    def fn5(self):
+        nombre=str(self.entrada1.get())
+        apellido=str(self.entrada2.get())
+        cadinver = ""
+        cadinver2= ""
+        for l in nombre:
+            cadinver = l + cadinver
+        for l2 in apellido:
+            cadinver2 = l2 + cadinver2
+        self.message['text'] = '{} {} al reves {} {}'.format(nombre,apellido,cadinver,cadinver2)
 
 
 ventana.mainloop()
